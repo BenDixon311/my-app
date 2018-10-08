@@ -1,18 +1,53 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  
+ <v-layout row>
+      <v-flex xs12 sm6 offset-sm3>
+        <v-card>
+
+  <app-header></app-header>
+  
+
+  <app-servers></app-servers>
+
+
+  
+  <app-server-details></app-server-details>
+ <app-footer></app-footer>
+
+
+
+
+  
+  
+
+
+        </v-card>
+      </v-flex>
+
+
+
+     </v-layout>
+
+  
+  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './Header.vue';
+import Footer from './Footer.vue';
+import Servers from './Servers.vue';
+import ServerDetails from './ServerDetails.vue'
 
 export default {
-  name: 'app',
+
   components: {
-    HelloWorld
-  }
+    'app-header': Header,
+    'app-servers': Servers,
+    'app-server-details': ServerDetails,
+    'app-footer': Footer
+  },
+
+
 }
 </script>
 
